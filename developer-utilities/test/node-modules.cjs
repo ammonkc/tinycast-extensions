@@ -68,15 +68,6 @@ const execFileAsync = promisify(execFile);
     const repositories = await findRepositories(root);
     assert.equal(repositories.length, 1);
     assert.equal(repositories[0].path, await fs.realpath(project));
-    const standup = path.resolve(
-      __dirname,
-      "../../../../../../../packages/bin/.local/bin/git-standup",
-    );
-    const { stdout: standupOutput } = await execFileAsync(standup, [], {
-      cwd: project,
-    });
-    assert.match(standupOutput, /test standup commit/);
-
     const result = await findNodeModules(root);
     assert.equal(result.entries.length, 1);
     assert.equal(result.entries[0].project, path.join("team", "app"));

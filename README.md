@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/hero.png" alt="tinycast-extensions" width="100%">
+</p>
+
 # tinycast-extensions
 
 Personal extensions for [Tinycast](https://github.com/abue-ammar/tinycast). Each folder is an
